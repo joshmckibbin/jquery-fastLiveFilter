@@ -56,7 +56,7 @@ jQuery.fn.fastLiveFilter = function(list, options) {
 		keyTimeout = setTimeout(function() {
 			if( input.val() === lastFilter ) return;
 			lastFilter = input.val();
-			input.change();
+			input.trigger('change');
 		}, timeout);
 	});
 	return this; // maintain jQuery chainability

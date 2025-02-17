@@ -51,7 +51,7 @@ jQuery.fn.fastLiveFilter = function(list, options) {
 		// var endTime = new Date().getTime();
 		// console.log('Search for ' + filter + ' took: ' + (endTime - startTime) + ' (' + numShown + ' results)');
 		return false;
-	}).keydown(function() {
+	}).on('keydown', function() {
 		clearTimeout(keyTimeout);
 		keyTimeout = setTimeout(function() {
 			if( input.val() === lastFilter ) return;
